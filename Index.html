@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      background-color: #d10000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Place Your Order</h2>
+
+  <form method="POST" action="http://localhost:5678/webhook-test/arts">
+    <label for="fullName">Full Name:</label>
+    <input type="text" name="Full Name" id="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="Email" id="email" required>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" name="Mobile Number" id="mobile" required>
+
+    <label for="type">Type of Service:</label>
+    <select name="Type of service" id="type" required>
+      <option value="">-- Select --</option>
+      <option value="Portrait Drawing">Portrait Drawing</option>
+      <option value="Online Drawing Class">Online Drawing Class</option>
+      <option value="Custom Artwork">Custom Artwork</option>
+    </select>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+</body>
+</html>
